@@ -26,7 +26,7 @@ public class MessageProducer {
     }
 
     public void send(String term){
-        ProducerRecord<String,String> producerRecord = new ProducerRecord<String,String>("e-commerce-topic",term);
+        ProducerRecord<String,String> producerRecord = new ProducerRecord<String,String>("e-commerce-stream",term);
         producer.send(producerRecord);
     }
 
